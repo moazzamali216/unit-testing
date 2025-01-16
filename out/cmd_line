@@ -1,0 +1,1 @@
+genhtml coverage_report.info --output-directory out/

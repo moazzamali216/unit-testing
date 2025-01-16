@@ -1,0 +1,22 @@
+Run & Build 
+  clang++ -o main main.cpp
+
+
+Lcov File Generating
+
+ g++ -o main main.cpp -fprofile-arcs -ftest-coverage
+ ./main
+ lcov --capture --directory . --output-file coverage_report.info
+ genhtml coverage_report.info --output-directory out/
+
+
+Unit Testing 
+1.  g++ -std=c++14 -g -I/Users/apple/Downloads/c++/googletest/googletest/include \
+     -L/Users/apple/Downloads/c++/googletest/build/lib \
+     -lgtest -lgtest_main -pthread \
+     ./main_test.cpp -o ./main_test
+
+
+
+
+   
